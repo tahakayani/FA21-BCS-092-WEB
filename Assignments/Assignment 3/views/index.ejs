@@ -1,0 +1,78 @@
+<div class="position-relative">
+  <video class="w-100" autoplay loop>
+      <source src="https://xcdn.next.co.uk/COMMON/Items/Default/Default/reiss/Videos/Aterlier_Season4_v2_DT.mp4" type="video/mp4">
+  </video>
+  <div class="position-absolute bottom-0 start-0 text-white p-3">
+      <h3>EVENT READY</h3>
+      <a href="#" class="d-block text-white">SHOP WOMEN'S</a>
+      <a href="#" class="d-block text-white">SHOP MEN'S</a>
+  </div>
+</div>
+
+<div class="position-relative mt-3">
+  <img src="images/2ndbgimg.jpeg" class="img-fluid w-100" alt="Atelier Season 04">
+  <div class="position-absolute bottom-0 start-0 p-3 text-white">
+      <h3 class="mb-2">ATELIER SEASON_04</h3>
+      <a href="#" class="d-block text-white text-decoration-underline small">SHOP THE COLLECTION</a>
+      <a href="#" class="d-block text-white text-decoration-underline small">VIEW THE EDITORIAL</a>
+  </div>
+</div>
+
+
+<div class="container mt-4">
+  <div class="row g-3">
+    <% products.forEach(product => { %>
+      <div class="col-md-4">
+        <div class="position-relative">
+          <img src="<%= product.image %>" class="img-fluid w-100" alt="<%= product.name %>">
+          <div class="position-absolute bottom-0 start-0 p-3 text-white">
+            <h3 class="mb-2"><%= product.name.toUpperCase() %></h3>
+            <a href="#" class="d-block text-white text-decoration-underline small">SHOP <%= product.category %>'S</a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<div class="position-relative mt-3">
+  <img src="images/bgimg2.jpeg" class="img-fluid w-100" alt="Atelier Season 04">
+  <div class="position-absolute bottom-0 start-0 p-3 text-white">
+      <h3 class="mb-2">ATELIER SEASON_04</h3>
+      <a href="#" class="d-block text-white text-decoration-underline small">SHOP THE COLLECTION</a>
+      <a href="#" class="d-block text-white text-decoration-underline small">VIEW THE EDITORIAL</a>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row g-3">
+      <div class="col-md-4">
+          <div class="position-relative">
+              <img src="images/blog1.jpeg" class="img-fluid w-100" alt="Dresses">
+              <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                  <h3 class="mb-2">OUR STORY</h3>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="position-relative">
+              <img src="images/blog2.jpeg" class="img-fluid w-100" alt="Knitwear">
+              <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                  <h3 class="mb-2">THE REISS APP</h3>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="position-relative">
+              <img src="images/blog3.jpeg" class="img-fluid w-100" alt="Petite">
+              <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                  <h3 class="mb-2">OUR STORE</h3>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<%- include('partials/footer') %>

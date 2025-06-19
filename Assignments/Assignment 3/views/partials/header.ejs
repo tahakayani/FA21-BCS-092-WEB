@@ -1,0 +1,46 @@
+ <!-- Announcement Bar -->
+ <div class="bg-dark text-white text-center py-2">
+  <p class="mb-0 small">FREE NEXT DAY DELIVERIES AND RETURN TO STORES *</p>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+  <div class="container">
+      <div class="input-group w-25">
+          <input type="text" class="form-control" placeholder="Search...">
+          <button class="btn btn-outline-secondary" type="button"><img src="images/search-input-button.svg" alt="Search"></button>
+      </div>
+      <a class="navbar-brand" href="/"><img src="/images/logo.png" alt="Logo" height="35"></a>
+      <div>
+          <a href="#" class="me-3"><img src="images/store-locator.svg" alt="Icon"></a>
+          <a href="#" class="me-3"><img src="images/favourites-inactive-large.svg" alt="Icon"></a>
+          <a href="#" class="me-3"><img src="images/myaccount.svg" alt="Icon"></a>
+          <a href="#"><img src="images/shopping-bag-large.svg" alt="Icon"></a>
+      </div>
+  </div>
+</nav>
+
+<!-- Menu Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a class="nav-link" href="#">WOMEN</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">MEN</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">CHILDREN</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">OUTLET</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">STORIES</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="d-flex align-items-center ms-auto">
+    <% if (typeof user !== 'undefined' && user) { %>
+      <span class="me-3">👋 Hello, <strong><%= user %></strong></span>
+      <a href="/logout" class="btn btn-outline-danger btn-sm">Logout</a>
+    <% } else { %>
+      <a href="/login" class="btn btn-outline-primary btn-sm me-2">Login</a>
+      <a href="/register" class="btn btn-outline-secondary btn-sm">Register</a>
+    <% } %>
+  </div>
+</div>
+</nav>

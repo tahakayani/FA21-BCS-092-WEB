@@ -1,0 +1,39 @@
+<div class="container my-5" style="max-width: 1100px;">
+  <div class="row">
+    <!-- Existing Customers Login -->
+    <div class="col-md-6 p-4 border">
+      <h5 class="text-center mb-4" style="letter-spacing:1px;font-weight:600;">EXISTING CUSTOMERS</h5>
+      <% if (typeof error !== 'undefined' && error) { %>
+        <div class="alert alert-danger text-center"><%= error %></div>
+      <% } %>
+      <form action="/login" method="POST">
+        <div class="mb-3">
+          <label class="form-label" for="email">EMAIL ADDRESS</label>
+          <input name="email" id="email" type="email" class="form-control" required>
+        </div>
+        <div class="mb-3 d-flex align-items-center justify-content-between">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rememberEmail" checked>
+            <label class="form-check-label small" for="rememberEmail">REMEMBER EMAIL</label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="password">YOUR PASSWORD</label>
+          <input name="password" id="password" type="password" class="form-control" required>
+        </div>
+        <div class="mb-3 d-flex justify-content-end">
+          <a href="#" class="small text-decoration-underline">FORGOTTEN PASSWORD?</a>
+        </div>
+        <button type="submit" class="btn btn-dark w-100 py-2" style="font-weight:600;letter-spacing:1px;">SIGN IN</button>
+      </form>
+    </div>
+    <!-- New Customers -->
+    <div class="col-md-6 d-flex flex-column align-items-center justify-content-center bg-light p-4">
+      <h5 class="text-center mb-3" style="letter-spacing:1px;font-weight:600;">NEW CUSTOMERS</h5>
+      <p class="text-center mb-4">CREATE AN ACCOUNT TO SHOP AT REISS TODAY</p>
+      <a href="/register" class="btn btn-dark w-75 py-2" style="font-weight:600;letter-spacing:1px;">REGISTER NOW</a>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
